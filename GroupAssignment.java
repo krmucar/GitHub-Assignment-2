@@ -66,7 +66,7 @@ public class GroupAssignment {
         return sum - sumOfOddNumberedIndexes(arr1);
     }
 
-    public static Array[] createArray()
+    public static int[] createArray()
     {
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter size: ");
@@ -77,5 +77,9 @@ public class GroupAssignment {
             numbers[i] = (int)(Math.random()*100);
         }
         return numbers;
+    }
+
+    public static void main(String[] args){
+        // add menu
     }
 }
