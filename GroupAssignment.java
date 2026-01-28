@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class GroupAssignment {
     public static void getMin(int[] arr){
         int minVal = Integer.Max_VALUE;
@@ -52,5 +54,18 @@ public class GroupAssignment {
             sum += arr1[k];
         }
         return sum - sumOfOddNumberedIndexes(arr1);
+    }
+
+    public static Array[] createArray()
+    {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter size: ");
+        int size = scan.nextInt();
+        int[] numbers = new int[size];
+        for (int i = 0; i<size; i++)
+        {
+            numbers[i] = (int)(Math.random()*100);
+        }
+        return numbers;
     }
 }
