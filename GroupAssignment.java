@@ -18,11 +18,9 @@ public class GroupAssignment {
         }
         System.out.println("Max value is: " + maxVal);
     }
+
+
     public static void main(String[] args) {
-        
-<<<<<<< Updated upstream
-        
-=======
         int[] arr1 = new int[4];
 
         arr1[0] = 1;
@@ -31,13 +29,9 @@ public class GroupAssignment {
         arr1[3] = 1000;
         arr1[4] = 10000;
 
-        System.out.println(sumOfOddNumberedIndexes(arr1));
-
-        
-
-        
-        
+        System.out.println(sumOfOddNumberedIndexes(arr1));        
     }
+
     public static int sumOfOddNumberedIndexes(int[] arr1)
     {
         int sum = 0;
@@ -48,8 +42,8 @@ public class GroupAssignment {
             }
         
         return sum;
-
     }
+
     public static int sumOfEvenNumberedNumbers(int[] arr1)
     {
         int sum = 0;
@@ -58,6 +52,5 @@ public class GroupAssignment {
             sum += arr1[k];
         }
         return sum - sumOfOddNumberedIndexes(arr1);
->>>>>>> Stashed changes
     }
 }
