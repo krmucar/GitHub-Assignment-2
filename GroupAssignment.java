@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class GroupAssignment {
     public static void getMin(int[] arr){
-        int minVal = Integer.Max_VALUE;
+        int minVal = Integer.MAX_VALUE;
         for(int i = 0; i < arr.length ; i++){
             if(arr[i] < minVal){
                 minVal= arr[i];
@@ -20,28 +20,38 @@ public class GroupAssignment {
         }
         System.out.println("Max value is: " + maxVal);
     }
+        
+    public static void findAvrgDiff(int[] arr){
 
-
-    public static void main(String[] args) {
-        int[] arr1 = new int[4];
-
-        arr1[0] = 1;
-        arr1[1] = 10;
-        arr1[2] = 100;
-        arr1[3] = 1000;
-        arr1[4] = 10000;
-
-        System.out.println(sumOfOddNumberedIndexes(arr1));        
+        int total = 0;
+        for(int i=0; i<arr.length; i++){
+            total = arr[i] + total;
+        }
+        
+        int avrg = total/arr.length;
+        int[] newArr = new int[arr.length];
+        for(int i=0; i<arr.length; i++){
+            newArr[i] = arr[i] - avrg;
+            
+        }
+        System.out.print("{");
+        int count = 0;
+         for(int i=0; i<newArr.length-1; i++){
+            count++;
+            System.out.print(newArr[i] + "," + " ");
+        }
+        System.out.print(arr[count]);
+        System.out.print("}");
     }
 
     public static int sumOfOddNumberedIndexes(int[] arr1)
     {
         int sum = 0;
         
-            for(int i = 0;i < arr1.length - 1;i = i + 2)
-            {
-                sum += arr1[i];
-            }
+        for(int i = 0;i < arr1.length - 1;i = i + 2)
+        {
+            sum += arr1[i];
+        }
         
         return sum;
     }
