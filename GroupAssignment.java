@@ -20,6 +20,44 @@ public class GroupAssignment {
     }
     public static void main(String[] args) {
         
+<<<<<<< Updated upstream
         
+=======
+        int[] arr1 = new int[4];
+
+        arr1[0] = 1;
+        arr1[1] = 10;
+        arr1[2] = 100;
+        arr1[3] = 1000;
+        arr1[4] = 10000;
+
+        System.out.println(sumOfOddNumberedIndexes(arr1));
+
+        
+
+        
+        
+    }
+    public static int sumOfOddNumberedIndexes(int[] arr1)
+    {
+        int sum = 0;
+        
+            for(int i = 0;i < arr1.length - 1;i = i + 2)
+            {
+                sum += arr1[i];
+            }
+        
+        return sum;
+
+    }
+    public static int sumOfEvenNumberedNumbers(int[] arr1)
+    {
+        int sum = 0;
+        for(int k = 0; k < arr1.length - 1;k++)
+        {
+            sum += arr1[k];
+        }
+        return sum - sumOfOddNumberedIndexes(arr1);
+>>>>>>> Stashed changes
     }
 }
